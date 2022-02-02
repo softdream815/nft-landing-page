@@ -39,6 +39,28 @@ const Homepage = () => {
                     <Button width={115} height={56} text={"Mint"}></Button>
                 </div>
             </div>
+
+            <div className="section-about">
+                <div className="container">
+                    <div className="about-text">
+                        <Text size={36} weight={700} margin>About</Text>
+                        <Text size={16} weight={300} margin>Everybody in the NFT world is focusing on creating avatars for the Metaverse, but we are here to make you a metaverse friend.</Text>
+
+                        <Text size={16} weight={700} margin>How will those avatars use the KOOBOO companion in the Metaverse?</Text>
+                        <Text size={16} weight={300} margin>This is the question that leads us to launch our KOOBOO NFTs collection, which will become one of the first robot companions of the Metaverse.</Text>
+                        <Text size={16} weight={300} margin inline>Nonetheless,</Text> <Text size={16} weight={700} inline>KOOBOO will be free and unique for each NFT holder.</Text>
+                        <Text size={16} weight={300} margin>KOOBOO NFT will be available to purchase as a action figure for our NFTs holders only. Our roadmap   is full of great milestones you should run to see now.</Text>
+
+                        <Text size={16} weight={300} margin>We are sure you are already hyped by all the utilities that we have and we will be adding more as we go along, so mint our NFTs, hold it and enjoy the floor price going up.  Check our roadmap  for more information.</Text>
+
+                        <Text size={20} weight={700}>-KOOBOO Team</Text>
+                    </div>
+
+                    <div className="img-container">
+                        <img src="images/robot3.png" alt=""></img>
+                    </div>
+                </div>
+            </div>
         </Layout>
     )
 }

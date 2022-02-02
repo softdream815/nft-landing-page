@@ -3,8 +3,9 @@ const Text = (props) => {
         fontFamily: 'Poppins',
         fontSize: props.size,
         color: 'white',
-        display: 'block',
+        display: props.inline ? 'inline' : 'block',
         fontWeight: props.weight,
+        marginBottom: props.margin ? 20 : 0
     };
 
     return(
