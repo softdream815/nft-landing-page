@@ -1,0 +1,12 @@
+.blur-circle {
+    position: absolute;
+
+    left: -50.26px;
+    top: 40.17px;
+
+    width: 350px;
+    height: 350px;
+    background: rgba(174, 84, 197, 0.9);
+    filter: blur(130px);
+    z-index: -1;
+}
