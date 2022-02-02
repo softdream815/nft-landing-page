@@ -7,6 +7,8 @@ button {
     color: #7A82C0;
     transition: 0.3s;
     background-color: black;
+
+    margin-right: 25px;
 }
 
 button:hover {

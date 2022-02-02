@@ -1,4 +1,4 @@
-.blur-circle {
+.blur-circle1 {
     position: absolute;
 
     left: -50.26px;
@@ -9,4 +9,48 @@
     background: rgba(174, 84, 197, 0.9);
     filter: blur(130px);
     z-index: -1;
+}
+
+.blur-circle2 {
+    position: absolute;
+
+    right: -150px;
+    top: 750px;
+
+    width: 350px;
+    height: 350px;
+    background: rgba(214, 50, 99, 0.4);
+    filter: blur(130px);
+    z-index: 1;
+}
+.section-home {
+    padding: 50px 100px;
+    display: flex;
+    justify-content: space-between;
+    .promote{
+        margin-top: 170px;
+        .btn-group {
+            margin-top: 60px;
+        }
+    }
+}
+
+.section-mint {
+    margin-top: 100px;
+    padding: 100px 100px;
+    background-color: #0D0D0D;
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    .img-container {
+        border-radius: 10px;
+    }
+    .mint-intro {
+        padding: 100px 80px 0px 80px;
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+        align-items: center;
+    }
 }
