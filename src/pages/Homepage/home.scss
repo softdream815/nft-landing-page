@@ -1,6 +1,6 @@
 .blur-circle1 {
+    display: block;
     position: absolute;
-
     left: -50.26px;
     top: 40.17px;
 
@@ -13,7 +13,6 @@
 
 .blur-circle2 {
     position: absolute;
-
     right: -150px;
     top: 750px;
 
@@ -35,6 +34,7 @@
             margin-top: 60px;
         }
     }
+    .img-container-res {display: none;}
     .img-container {
         width: 50%;
         img {
@@ -85,7 +85,6 @@
             padding: 60px 50px;
         }
         .img-container {
-
             width: 34%;
             img {
                 border-radius: 15px;
@@ -95,6 +94,8 @@
         }
     }
 }
+
+.section-title-howto {display: none;}
 
 .section-howto {
     display: flex;
@@ -136,10 +137,10 @@
     .description {
         width: 42%;
         .step1 {
-            margin-bottom: 160px;
+            margin-bottom: 170px;
         }
         .step2 {
-            margin-bottom: 160px;
+            margin-bottom: 170px;
         }
 
     }
@@ -233,5 +234,132 @@
 
     100% {
         opacity: 1;
+    }
+}
+
+@media(max-width: 768px) {
+    .blur-circle1 { display:none; }
+    .blur-circle2 { display:none; }
+    .section-home {
+        padding: 0px 20px;
+        display: block;
+        .img-container-res {
+            display: block;
+            width: 100%;
+            img {width: 100%; height: 100%;}
+        }
+        .img-container {display: none;}
+        .promote {
+            margin-top: 30px;
+            width: 100%;
+            .title {
+                text-align: center;
+                span{font-size: 48px!important;}
+            }
+            .description {
+                text-align: center;
+                span{font-size: 14px!important;}
+            }
+        }
+        .btn-group {
+            button {
+                margin-right: 0px;
+                width: 120px!important;
+                height: 45px!important;
+            }
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+    }
+    .section-mint {
+        padding: 70px 24px;
+        display: block;
+        .img-container {width: 100%;}
+        .mint-intro {
+            text-align: center;
+            span {font-size: 14px!important;}
+            padding: 30px 0px;
+            gap: 30px;
+        }
+    }
+    .section-about {
+        margin-top: 100px;
+        padding: 0px 24px;
+        .container {
+            display: block;
+            .about-text {
+                width: auto;
+
+                padding: 35px 20px;
+                .title {text-align: center;span{font-size: 24px!important;}}
+                span{font-size: 14px!important;}
+            }
+            .img-container {
+                width: 100%;
+            }
+        }
+    }
+
+    .section-title-howto {
+        margin-top: 130px;
+        display: block;
+        text-align: center;
+        position: relative;
+        img {
+            position: absolute;
+            top: 50px;
+            right: 0px;
+        }
+    }
+
+    .section-howto {
+        margin-top: 100px;
+        padding: 0px 24px;
+        .arrow-part {
+            display: none;
+        }
+        .step-number {
+            width: 10%;
+            .numbering {
+                width: 40px;
+                height: 40px;
+            }
+        }
+        .description {
+            width: 80%;
+            .step1 {
+                img {width: 24px; height: 24px;}
+                .title {span{font-size: 16px!important;}}
+                .desc {span{font-size: 12px!important; margin-bottom: 15px!important;}}
+            }
+            .step2 {
+                img {width: 24px; height: 24px;}
+                .title {span{font-size: 16px!important;}}
+                .desc {span{font-size: 12px!important; margin-bottom: 15px!important;}}
+            }
+            .step3 {
+                .title {span{font-size: 16px!important;}}
+                .desc {span{font-size: 12px!important; margin-bottom: 15px!important;}}
+            }
+        }
+    }
+    .section-FAQ {
+        padding: 0px 0px;
+        .container {
+            .title {
+                text-align: center;
+                span {font-size: 24px!important;}
+            }
+        }
+    }
+    .accordion__button {
+        font-size: 16px;
+        padding: 40px 100px 40px 24px;
+    }
+    .accordion__panel {
+        font-size: 12px;
+        padding: 40px 30px;
+        font-weight: 300;
     }
 }

@@ -23,10 +23,18 @@ const Homepage = () => {
             <span className="blur-circle2"></span>
 
             <div className="section-home">
+                <div className="img-container-res">
+                    <img src="images/robot1.png" alt=""></img>
+                </div>
+
                 <div className="promote">
-                    <Text size={64} weight={500}>Join the</Text>
-                    <Text size={64} weight={500}>robolution!</Text>
-                    <Text size={20} weight={300}>Our robot can beat up your robot.</Text>
+                    <div className="title">
+                        <Text size={64} weight={500}>Join the</Text>
+                        <Text size={64} weight={500}>robolution!</Text>
+                    </div>
+                    <div className="description">
+                        <Text size={20} weight={300}>Our robot can beat up your robot.</Text>
+                    </div>
                     <div className="btn-group">
                         <Button width={150} height={56} text={"Explore"} />
                         <Button width={150} height={56} text={"Discover"} />
@@ -56,8 +64,9 @@ const Homepage = () => {
             <div className="section-about">
                 <div className="container">
                     <div className="about-text">
-                        <Text size={36} weight={700} margin>About</Text>
-
+                        <div className="title">
+                            <Text size={36} weight={700} margin>About</Text>
+                        </div>
                         <Text size={16} weight={300} margin>Everybody in the NFT world is focusing on creating
                             avatars for the Metaverse, but we are here to make you a metaverse friend.</Text>
 
@@ -68,7 +77,7 @@ const Homepage = () => {
                             NFTs collection,
                             which will become one of the first robot companions of the Metaverse.</Text>
 
-                        <Text size={16} weight={300} margin inline>Nonetheless,</Text><Text size={16} weight={700} inline>
+                        <Text size={16} weight={300} margin inline>Nonetheless, </Text><Text size={16} weight={700} inline>
                             KOOBOO will be free and unique for each NFT holder.</Text>
                         <Text size={16} weight={300} margin>KOOBOO NFT will be available to purchase as a action figure
                             for our NFTs holders only.
@@ -83,6 +92,12 @@ const Homepage = () => {
                 </div>
             </div>
 
+            <div className="section-title-howto">
+                <Text size={24} weight={700}>How do I get a</Text>
+                <Text size={24} weight={700}>KOOBOO?</Text>
+                <img src="images/arrow3.png" alt=""></img>
+            </div>
+
             <div className="section-howto">
                 <div className="arrow-part">
                     <Text size={36} weight={700}>How do I get a</Text>
@@ -91,65 +106,68 @@ const Homepage = () => {
                 </div>
 
                 <div className="step-number">
-                    <img src="images/step/number1.png" alt=""></img>
+                    <img className="numbering" src="images/step/number1.png" alt=""></img>
                     <img src="images/step/line.png" alt=""></img>
-                    <img src="images/step/number2.png" alt=""></img>
+                    <img className="numbering" src="images/step/number2.png" alt=""></img>
                     <img src="images/step/line.png" alt=""></img>
-                    <img src="images/step/number3.png" alt=""></img>
+                    <img className="numbering" src="images/step/number3.png" alt=""></img>
                 </div>
 
                 <div className="description">
                     <div className="step1">
                         <img src="images/metamask.png" alt="" />
-                        <Text size={24} weight={700} margin>Download and install MetaMask</Text>
-                        <Text size={18} weight={300}>Download and install a Chrome browser plugin called MetaMask.
-                            This will allow websites (that you authorize) access to your Ethereum account.</Text>
+                        <div className="title"><Text size={24} weight={700} margin>Download and install MetaMask</Text></div>
+                        <div className="desc"><Text size={18} weight={300}>Download and install a Chrome browser plugin called MetaMask.
+                            This will allow websites (that you authorize) access to your Ethereum account.</Text></div>
                     </div>
                     <div className="step2">
                         <img src="images/ethereum.png" alt="" />
-                        <Text size={24} weight={700} margin>Buy some Ethereum</Text>
-                        <Text size={18} weight={300}>If you made a new account, buy some Ethereum.
-                            The MetaMask plugin has a button that will allow you to buy Ether from Coinbase.</Text>
+                        <div className="title"><Text size={24} weight={700} margin>Buy some Ethereum</Text></div>
+                        <div className="desc"><Text size={18} weight={300}>If you made a new account, buy some Ethereum.
+                            The MetaMask plugin has a button that will allow you to buy Ether from Coinbase.</Text></div>
                     </div>
                     <div className="step3">
-                        <Text size={24} weight={700} margin>Start bidding, buying and selling KOOBOO NFT'S</Text>
-                        <Text size={18} weight={300}>Once you have the plugin installed, this website will recognize
-                            it and add buttons that allow you to bid on, buy and sell punks directly in the interface.</Text>
+                        <div className="title"><Text size={24} weight={700} margin>Start bidding, buying and selling KOOBOO NFT'S</Text></div>
+                        <div className="desc"><Text size={18} weight={300}>Once you have the plugin installed, this website will recognize
+                            it and add buttons that allow you to bid on, buy and sell punks directly in the interface.</Text></div>
                     </div>
                 </div>
             </div>
-            <div className="section-howto">
 
+            <div className="section-title-howto">
+                <Text size={24} weight={700}>Roadmap</Text>
+                <img src="images/arrow4.png" alt=""></img>
+            </div>
+
+            <div className="section-howto">
                 <div className="description">
                     <div className="step1">
-                        <Text size={24} weight={700} margin>SET KOOBOO FREE</Text>
-                        <Text size={18} weight={300} margin>Our legendary Cyber Sneakers have some powers.
+                        <div className="title"><Text size={24} weight={700} margin>SET KOOBOO FREE</Text></div>
+                        <div className="desc"><Text size={18} weight={300} margin>Our legendary Cyber Sneakers have some powers.
                             It is time to discover them.  real life approach</Text>‍
                         <Text size={18} weight={300} margin>KOOBOO will be made into a physical action figure.
-                            50 will be offered by raffle. Countdown starts now.</Text>
-
-
+                            50 will be offered by raffle. Countdown starts now.</Text></div>
                     </div>
                     <div className="step2">
-                        <Text size={24} weight={700} margin>KOOBOO WORLD TOUR</Text>
-                        <Text size={18} weight={300} margin>The IRL's KOOBOO'S are ready!!!
+                        <div className="title"><Text size={24} weight={700} margin>KOOBOO WORLD TOUR</Text></div>
+                        <div className="desc"><Text size={18} weight={300} margin>The IRL's KOOBOO'S are ready!!!
                             50 KOOBOO action figures will be dispatched to their NFT owner through a raffle.</Text>
                         <Text size={18} weight={300}>What is better than bringing your KOOBOO to the world cup final?
-                            Some holders will be invited to attend the FIFA World cup</Text>
+                            Some holders will be invited to attend the FIFA World cup</Text></div>
                     </div>
                     <div className="step3">
-                        <Text size={24} weight={700} margin>KOOBOO TO THE METAVERSE</Text>
-                        <Text size={18} weight={300}>We will work on getting KOOBOO as a virtual companion or
-                            accessory in the metaverse.</Text>
+                        <div className="title"><Text size={24} weight={700} margin>KOOBOO TO THE METAVERSE</Text></div>
+                        <div className="desc"><Text size={18} weight={300}>We will work on getting KOOBOO as a virtual companion or
+                            accessory in the metaverse.</Text></div>
                     </div>
                 </div>
 
                 <div className="step-number">
-                    <img src="images/step/number1.png" alt=""></img>
+                    <img className="numbering" src="images/step/number1.png" alt=""></img>
                     <img src="images/step/line.png" alt=""></img>
-                    <img src="images/step/number2.png" alt=""></img>
+                    <img className="numbering" src="images/step/number2.png" alt=""></img>
                     <img src="images/step/line.png" alt=""></img>
-                    <img src="images/step/number3.png" alt=""></img>
+                    <img className="numbering" src="images/step/number3.png" alt=""></img>
                 </div>
 
                 <div className="arrow-part-2">

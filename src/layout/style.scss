@@ -56,3 +56,15 @@ footer {
         text-align: center;
     }
 }
+
+@media(max-width: 768px) {
+    .header {
+        width: calc(100% - 40px);
+        padding: 10px 20px;
+        .section {display: none;}
+    }
+    .social-icons {}
+    .section-howto {
+        .arrow-part-2 {display: none;}
+    }
+}
