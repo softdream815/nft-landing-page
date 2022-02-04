@@ -1,9 +1,11 @@
 
 
 .header {
+    background-color: rgba(0,0,0,0.9);
     z-index: 2;
     position: fixed;
-    width: calc(100% - 200px);
+    width: calc(100vw - 200px);
+    height: 65px;
     top: 0;
     padding: 10px 100px;
     display: flex;
@@ -33,6 +35,7 @@
         display: flex;
         justify-content: space-between;
         gap: 24px;
+        .menu {display: none;}
     }
 }
 
@@ -57,14 +60,28 @@ footer {
     }
 }
 
-@media(max-width: 768px) {
+@media(max-width: 896px) {
     .header {
         width: calc(100% - 40px);
         padding: 10px 20px;
         .section {display: none;}
+        .social-icons {
+            .menu {display: block;}
+        }
     }
-    .social-icons {}
+
     .section-howto {
         .arrow-part-2 {display: none;}
+    }
+    footer {
+        padding: 0px 20px;
+        .container {
+            .logo{
+                svg {
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+        }
     }
 }

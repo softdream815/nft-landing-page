@@ -237,7 +237,18 @@
     }
 }
 
-@media(max-width: 768px) {
+@media(max-width: 1024px) {
+    .section-howto {
+        .arrow-part {
+            img {width: 200px; height:200px;}
+        }
+        .arrow-part-2 {
+            img {width: 200px; height:200px;}
+        }
+    }
+}
+
+@media(max-width: 896px) {
     .blur-circle1 { display:none; }
     .blur-circle2 { display:none; }
     .section-home {
@@ -319,6 +330,9 @@
         .arrow-part {
             display: none;
         }
+        .arrow-part-2 {
+            display: none;
+        }
         .step-number {
             width: 10%;
             .numbering {
@@ -332,11 +346,13 @@
                 img {width: 24px; height: 24px;}
                 .title {span{font-size: 16px!important;}}
                 .desc {span{font-size: 12px!important; margin-bottom: 15px!important;}}
+                margin-bottom: 200px;
             }
             .step2 {
                 img {width: 24px; height: 24px;}
                 .title {span{font-size: 16px!important;}}
                 .desc {span{font-size: 12px!important; margin-bottom: 15px!important;}}
+                margin-bottom: 200px;
             }
             .step3 {
                 .title {span{font-size: 16px!important;}}

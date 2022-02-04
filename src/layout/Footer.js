@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer>
       <div className='container'>
-        <div>
+        <div className='logo'>
           <Logo width={100} height={100}/>
         </div>
         <div>

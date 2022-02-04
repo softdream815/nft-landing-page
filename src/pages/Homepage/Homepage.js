@@ -22,7 +22,7 @@ const Homepage = () => {
             <span className="blur-circle1"></span>
             <span className="blur-circle2"></span>
 
-            <div className="section-home">
+            <div className="section-home" id="home">
                 <div className="img-container-res">
                     <img src="images/robot1.png" alt=""></img>
                 </div>
@@ -36,8 +36,8 @@ const Homepage = () => {
                         <Text size={20} weight={300}>Our robot can beat up your robot.</Text>
                     </div>
                     <div className="btn-group">
-                        <Button width={150} height={56} text={"Explore"} />
-                        <Button width={150} height={56} text={"Discover"} />
+                        <Button width={150} height={56} text={"About"} />
+                        <Button width={150} height={56} text={"Mint"} />
                     </div>
                 </div>
 
@@ -61,7 +61,7 @@ const Homepage = () => {
                 </div>
             </div>
 
-            <div className="section-about">
+            <div className="section-about" id="about">
                 <div className="container">
                     <div className="about-text">
                         <div className="title">
@@ -98,7 +98,7 @@ const Homepage = () => {
                 <img src="images/arrow3.png" alt=""></img>
             </div>
 
-            <div className="section-howto">
+            <div className="section-howto" id="howto">
                 <div className="arrow-part">
                     <Text size={36} weight={700}>How do I get a</Text>
                     <Text size={36} weight={700}>KOOBOO?</Text>
@@ -139,7 +139,7 @@ const Homepage = () => {
                 <img src="images/arrow4.png" alt=""></img>
             </div>
 
-            <div className="section-howto">
+            <div className="section-howto" id="roadmap">
                 <div className="description">
                     <div className="step1">
                         <div className="title"><Text size={24} weight={700} margin>SET KOOBOO FREE</Text></div>
@@ -176,7 +176,7 @@ const Homepage = () => {
                 </div>
             </div>
 
-            <div className="section-FAQ">
+            <div className="section-FAQ" id="faq">
                 <div className="container">
                     <div className="title"><Text size={36} weight={700} margin>FAQ</Text></div>
                     <Accordion allowMultipleExpanded allowZeroExpanded >
