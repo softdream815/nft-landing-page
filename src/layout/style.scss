@@ -5,12 +5,43 @@
     z-index: 2;
     position: fixed;
     width: calc(100vw - 200px);
+    left: 0px;
     height: 65px;
     top: 0;
     padding: 10px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .menu-bar {
+
+        display: none;
+        flex-direction: column;
+        position: absolute;
+
+        top: 85px;
+        left: 0;
+        background-color: rgba($color: #000000, $alpha: 0.9);
+        overflow: hidden;
+        max-height: 0px;
+        width: 100%;
+        text-align: center;
+        .menu-item {
+            padding: 20px 0px;
+            a {
+                color: white;
+                text-decoration: none;
+                transition: 0.3s;
+            }
+            a:hover {
+                color:#7A82C0
+            }
+        }
+        transition: all 0.5s;
+    }
+    .expand {
+        overflow: auto;
+        max-height: 10000px;
+    }
 
     .section {
         display: flex;
@@ -62,11 +93,15 @@ footer {
 
 @media(max-width: 896px) {
     .header {
-        width: calc(100% - 40px);
+        left: 0px;
+        width: calc(100vw - 40px);
         padding: 10px 20px;
         .section {display: none;}
         .social-icons {
             .menu {display: block;}
+        }
+        .menu-bar {
+            display: flex;
         }
     }
 
