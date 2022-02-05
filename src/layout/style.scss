@@ -1,7 +1,9 @@
 
 
+.background {
+    background-color: black;
+}
 .header {
-    background-color: rgba(0,0,0,0.9);
     z-index: 2;
     position: fixed;
     width: calc(100vw - 200px);
@@ -12,6 +14,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.5s;
     .menu-bar {
 
         display: none;
@@ -48,6 +51,21 @@
         justify-content: space-between;
         gap: 30px;
 
+        font-style: normal;
+        font-size: 14px;
+        font-weight: 500;
+
+        a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        a:hover {
+            color:#7A82C0
+        }
+    }
+
+    .mint-section {
         font-style: normal;
         font-size: 14px;
         font-weight: 500;
@@ -111,6 +129,7 @@ footer {
     footer {
         padding: 0px 20px;
         .container {
+            padding: 50px 0px;
             .logo{
                 svg {
                     width: 60px;

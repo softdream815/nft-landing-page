@@ -1,11 +1,12 @@
 import Header from './Header'
 import Footer from './Footer'
+import MintHeader from './MintHeader'
 
-const Layout = ({ children }) => {
+const Layout = (props) => {
   return (
     <>
-      <Header />
-      <main>{children}</main>
+      {props.headerType === 'mint' ? <MintHeader/> : <Header />}
+      <main>{props.children}</main>
       <Footer />
 
     </>
