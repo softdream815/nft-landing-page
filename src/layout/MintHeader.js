@@ -6,7 +6,7 @@ import Text from '../components/text/Text'
 import { Link } from 'react-router-dom'
 import './style.scss'
 
-const MintHeader = () => {
+const MintHeader = ( props ) => {
 
     return (
         <div className='header'>
@@ -17,7 +17,7 @@ const MintHeader = () => {
             </div>
 
             <div className='social-icons'>
-                <button>connect wallet</button>
+                <button className='btn-connect' onClick={props.onclick}>{props.title}</button>
                 <Link to='/'><Twitter /></Link>
                 <Link to='/'><Discord /></Link>
             </div>

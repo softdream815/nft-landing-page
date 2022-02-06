@@ -1,3 +1,94 @@
 .container {
     margin-top: 85px;
 }
+.blur-circle1 {
+    display: block;
+    position: absolute;
+    left: -50.26px;
+    top: 40.17px;
+
+    width: 350px;
+    height: 350px;
+    background: rgba(174, 84, 197, 0.9);
+    filter: blur(130px);
+    z-index: -1;
+}
+
+.blur-circle2 {
+    position: absolute;
+    right: -150px;
+    top: 750px;
+
+    width: 350px;
+    height: 350px;
+    background: rgba(214, 50, 99, 0.4);
+    filter: blur(130px);
+    z-index: 1;
+}
+
+.mint-container {
+    margin-top: 100px;
+    display: flex;
+
+    align-items: center;
+    flex-direction: column;
+    .description {
+        max-width: 350px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .preview {
+        max-width: 350px;
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+    .mint-count {
+        max-width: 350px;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        .text-wrapper {
+            width: 25px;
+            text-align: center;
+        }
+        .btn-wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .btn-count {
+                width: 40px;
+                height: 56px;
+                background-color: white;
+                border-radius: 32px;
+                margin-right: 0px;
+                color: black;
+                font-size: 24px;
+            }
+            .btn-count:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    .mint-button {
+        margin-top: 20px;
+        .btn-mint {
+            margin-right: 0px;
+            padding: 15px 40px;
+            font-family: 'Poppins';
+            font-size: 24px;
+            color: white;
+            border-radius: 10px;
+            background: linear-gradient(114.44deg, #9F03FF 0%, #151515 100%);
+
+        }
+        .btn-mint:hover {
+            cursor: pointer;
+            background: linear-gradient(114.44deg, #664cdb 0%, #151515 100%);
+        }
+    }
+    .mint-description {
+        margin-top: 70px;
+    }
+}

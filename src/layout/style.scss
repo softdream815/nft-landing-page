@@ -83,8 +83,19 @@
     .social-icons {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         gap: 24px;
         .menu {display: none;}
+        button {
+            border: none;
+            border-radius: 10px;
+            padding: 10px 30px;
+            font-family: 'Poppins';
+            height: 50px;
+            color: white;
+            background: linear-gradient(114.44deg, #9F03FF 0%, #230336 100%);
+            font-size: 18px;
+        }
     }
 }
 
@@ -92,7 +103,7 @@ footer {
     padding: 0px 100px;
 
     .container {
-        padding: 90px 0px;
+        padding: 50px 0px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -101,6 +112,12 @@ footer {
             display: flex;
             justify-content: space-between;
             gap: 24px;
+        }
+        .logo{
+            svg {
+                width: 60px;
+                height: 60px;
+            }
         }
     }
     .copyright {

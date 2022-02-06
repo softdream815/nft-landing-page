@@ -10,7 +10,7 @@ const App = () => {
   const onScroll = (e) => {
     let scrollTop = window.pageYOffset
 
-    if (scrollTop > 300) {
+    if (scrollTop > 200) {
       document.getElementsByClassName('header').item(0)?.classList.add('background')
     } else {
       document.getElementsByClassName('header').item(0)?.classList.remove('background')
