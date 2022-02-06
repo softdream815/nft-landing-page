@@ -1,10 +1,12 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Layout from '../../layout/Layout'
 import { ethers } from 'ethers'
 import Web3Modal from 'web3modal'
 import WalletConnectProvider from "@walletconnect/web3-provider";
 import Text from '../../components/text/Text'
 import './mint.scss'
+import {NotificationContainer, NotificationManager} from 'react-notifications'
+import 'react-notifications/lib/notifications.css';
 
 const providerOptions = {
     // Example with WalletConnect provider
@@ -27,7 +29,16 @@ const MintPage = () => {
     const [currentAddress, setAddress] = useState('')
     const [mintCount, setMintCount] = useState(1)
 
+    useEffect(() => {
+        disconnectWallet()
+    },[])
+
     const connect = async () => {
+        const { ethereum } = window;
+        if(!ethereum) {
+            NotificationManager.warning(`Please install metamask`, 'No Ethereum Detected', 2000);
+            return;
+        }
         const instance = await web3Modal.connect();
 
         const provider = new ethers.providers.Web3Provider(instance);
@@ -41,6 +52,7 @@ const MintPage = () => {
             })
             setConnect(true)
             setAddress(accounts[0])
+            NotificationManager.success(`${accounts[0]}`, 'Wallet Connected', 2000);
         } catch (switchError) {
             return await web3Modal.clearCachedProvider()
         }
@@ -72,7 +84,8 @@ const MintPage = () => {
     }
 
     return (
-        <Layout headerType={'mint'} onclick = {isConnect ? () => disconnectWallet() : () => connect()} title = {isConnect ? currentAddress : 'Connect Wallet'}>
+        <Layout headerType={'mint'} onclick = {isConnect ? () => disconnectWallet() : () => connect()} title = {isConnect ? 'Disconnect' : 'Connect Wallet'}>
+            <NotificationContainer/>
             <span className="blur-circle1"></span>
             <span className="blur-circle2"></span>
             <div className='mint-container'>

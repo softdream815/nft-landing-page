@@ -86,7 +86,7 @@
         align-items: center;
         gap: 24px;
         .menu {display: none;}
-        button {
+        .btn-connect {
             border: none;
             border-radius: 10px;
             padding: 10px 30px;
@@ -95,6 +95,9 @@
             color: white;
             background: linear-gradient(114.44deg, #9F03FF 0%, #230336 100%);
             font-size: 18px;
+        }
+        .btn-connect {
+            cursor: pointer;
         }
     }
 }
@@ -134,6 +137,10 @@ footer {
         .section {display: none;}
         .social-icons {
             .menu {display: block;}
+            .btn-connect {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
         }
         .menu-bar {
             display: flex;

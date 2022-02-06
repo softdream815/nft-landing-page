@@ -1,7 +1,6 @@
 import { ReactComponent as Logo } from '../assets/icon/logo.svg';
 import { ReactComponent as Twitter } from '../assets/icon/twitter.svg';
 import { ReactComponent as Discord } from '../assets/icon/discord.svg';
-import Text from '../components/text/Text'
 
 import { Link } from 'react-router-dom'
 import './style.scss'
