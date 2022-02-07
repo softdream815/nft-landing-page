@@ -52,16 +52,21 @@ const MintPage = () => {
             })
             setConnect(true)
             setAddress(accounts[0])
-            NotificationManager.success(`${accounts[0]}`, 'Wallet Connected', 2000);
+            NotificationManager.success(`${accounts[0]}`, 'Wallet Connected', 3000);
         } catch (switchError) {
             return await web3Modal.clearCachedProvider()
         }
+
+        window.ethereum.on('accountsChanged', function (accounts) {
+            NotificationManager.info(`${accounts[0]}`, 'Wallet Address Changed', 3000);
+            setAddress(accounts[0])
+        });
     }
 
     const disconnectWallet = async () => {
         try {
             setConnect(false)
-            return await web3Modal.clearCachedProvider()
+            await web3Modal.clearCachedProvider()
 
         } catch (e) {
             console.error(e)
@@ -95,7 +100,7 @@ const MintPage = () => {
                 </div>
 
                 <div className='preview'>
-                    <img src='images/robot.gif'/>
+                    <img src='images/robot.gif' alt=''/>
                 </div>
 
                 <div className='mint-count'>
