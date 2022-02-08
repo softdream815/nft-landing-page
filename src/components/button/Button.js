@@ -7,7 +7,7 @@ const Button = (props) => {
         height: props.height
     };
     return (
-        <button style={divStyle}>{props.text}</button>
+        <button style={divStyle} onClick={props.onClick}>{props.text}</button>
     )
 }
 

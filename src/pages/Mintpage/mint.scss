@@ -79,13 +79,15 @@
             font-family: 'Poppins';
             font-size: 24px;
             color: white;
+            border: none;
             border-radius: 10px;
             background: linear-gradient(114.44deg, #9F03FF 0%, #151515 100%);
+            transition: all 0.3s;
 
         }
         .btn-mint:hover {
             cursor: pointer;
-            background: linear-gradient(114.44deg, #664cdb 0%, #151515 100%);
+            background: linear-gradient(114.44deg, #151515 0%, #9F03FF 100%);
         }
     }
     .mint-description {

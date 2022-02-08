@@ -1,6 +1,8 @@
+import { useState } from 'react'
 import Layout from "../../layout/Layout"
 import Button from '../../components/button/Button'
 import Text from '../../components/text/Text'
+import AlertModal from '../../components/modal/AlertModal'
 import {
     Accordion,
     AccordionItem,
@@ -9,8 +11,29 @@ import {
     AccordionItemPanel,
 } from 'react-accessible-accordion';
 import './home.scss'
+import $ from "jquery"
 
 const Homepage = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const onLink = (type) => {
+        $('html, body').animate(
+          {
+            scrollTop: $(`#${type}`).offset().top-200,
+          },
+          800
+        )
+    }
+
+    const onMint = () => {
+        setIsOpen(true)
+    }
+
+    const closeModal = () => {
+        console.log('HEY!!')
+        setIsOpen(false)
+    }
+
     const items = [
         {uuid:1, heading:'Q1. HOW MUCH DOES IT COST TO BUY ONE KOOBOO NFT?', content:'The price of minting will be announced soon on our Discord, so make sure to join our Discord. A lot of other announcements will be made only on our Discord channel.'},
         {uuid:2, heading:'Q2. HOW CAN I GET MY HANDS ON THE KOOBOO NFT?', content:`You must be patient like an intelligent investor and well-connected like the elite. So join our Official Discord channel, start building your connections, and increase your chances of getting your hands on these rare KOOBOO'S.`},
@@ -19,6 +42,7 @@ const Homepage = () => {
     ];
     return (
         <Layout>
+            <AlertModal isOpen={isOpen} closeModal={closeModal} />
             <span className="blur-circle1"></span>
             <span className="blur-circle2"></span>
 
@@ -36,8 +60,8 @@ const Homepage = () => {
                         <Text size={20} weight={300}>Our robot can beat up your robot.</Text>
                     </div>
                     <div className="btn-group">
-                        <Button width={150} height={56} text={"About"} />
-                        <Button width={150} height={56} text={"Mint"} />
+                        <Button width={150} height={56} text={"About"} onClick={() => onLink('about')} />
+                        <Button width={150} height={56} text={"Mint"} onClick={() => onMint()} />
                     </div>
                 </div>
 
@@ -57,7 +81,7 @@ const Homepage = () => {
                         Sagittis tristique in sapien scelerisque massa condimentum adipiscing vitae.
                     </Text>
 
-                    <Button width={115} height={56} text={"Mint"}></Button>
+                    <Button width={115} height={56} text={"Mint"} onClick={onMint} ></Button>
                 </div>
             </div>
 

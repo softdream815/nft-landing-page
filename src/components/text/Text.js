@@ -2,7 +2,7 @@ const Text = (props) => {
     const divStyle = {
         fontFamily: 'Poppins',
         fontSize: props.size,
-        color: 'white',
+        color: props.black ? 'black' : 'white',
         display: props.inline ? 'inline' : 'block',
         fontWeight: props.weight,
         marginBottom: props.margin ? 20 : 0

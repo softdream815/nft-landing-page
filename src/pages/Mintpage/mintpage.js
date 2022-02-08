@@ -5,7 +5,7 @@ import Web3Modal from 'web3modal'
 import WalletConnectProvider from "@walletconnect/web3-provider";
 import Text from '../../components/text/Text'
 import './mint.scss'
-import {NotificationContainer, NotificationManager} from 'react-notifications'
+import { NotificationContainer, NotificationManager } from 'react-notifications'
 import 'react-notifications/lib/notifications.css';
 
 const providerOptions = {
@@ -31,11 +31,18 @@ const MintPage = () => {
 
     useEffect(() => {
         disconnectWallet()
-    },[])
+
+        window.ethereum.on('accountsChanged', function (accounts) {
+            if (currentAddress !== accounts[0]) {
+                NotificationManager.info(`${accounts[0]}`, 'Wallet Address Changed', 3000);
+                setAddress(accounts[0])
+            }
+        });
+    }, [])
 
     const connect = async () => {
         const { ethereum } = window;
-        if(!ethereum) {
+        if (!ethereum) {
             NotificationManager.warning(`Please install metamask`, 'No Ethereum Detected', 2000);
             return;
         }
@@ -48,7 +55,7 @@ const MintPage = () => {
         try {
             await window.ethereum.request({
                 method: 'wallet_switchEthereumChain',
-                params: [{ chainId: '0x1'}],
+                params: [{ chainId: '0x1' }],
             })
             setConnect(true)
             setAddress(accounts[0])
@@ -56,11 +63,6 @@ const MintPage = () => {
         } catch (switchError) {
             return await web3Modal.clearCachedProvider()
         }
-
-        window.ethereum.on('accountsChanged', function (accounts) {
-            NotificationManager.info(`${accounts[0]}`, 'Wallet Address Changed', 3000);
-            setAddress(accounts[0])
-        });
     }
 
     const disconnectWallet = async () => {
@@ -76,21 +78,21 @@ const MintPage = () => {
 
     const addCount = () => {
         let cnt = mintCount
-        if(cnt >= 7) return
+        if (cnt >= 7) return
         cnt++
         setMintCount(cnt)
     }
 
     const subCount = () => {
         let cnt = mintCount
-        if(cnt <= 1) return
+        if (cnt <= 1) return
         cnt--
         setMintCount(cnt)
     }
 
     return (
-        <Layout headerType={'mint'} onclick = {isConnect ? () => disconnectWallet() : () => connect()} title = {isConnect ? 'Disconnect' : 'Connect Wallet'}>
-            <NotificationContainer/>
+        <Layout headerType={'mint'} onclick={isConnect ? () => disconnectWallet() : () => connect()} title={isConnect ? 'Disconnect' : 'Connect Wallet'}>
+            <NotificationContainer />
             <span className="blur-circle1"></span>
             <span className="blur-circle2"></span>
             <div className='mint-container'>
@@ -100,7 +102,7 @@ const MintPage = () => {
                 </div>
 
                 <div className='preview'>
-                    <img src='images/robot.gif' alt=''/>
+                    <img src='images/robot.gif' alt='' />
                 </div>
 
                 <div className='mint-count'>
