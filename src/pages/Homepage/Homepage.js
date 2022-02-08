@@ -77,7 +77,8 @@ const Homepage = () => {
 
                 <div className="mint-intro">
                     <Text size={20} weight={300}>
-                        mint yourself a brand new kooboo bot on release day and enjoy all the special holder exclusive perks in our roadmap and more to come not yet announced!
+                        Mint yourself a brand new kooboo bot on release day and enjoy all the special
+                        holder exclusive perks in our roadmap and more to come not yet announced!
                     </Text>
 
                     <Button width={115} height={56} text={"Mint"} onClick={onMint} ></Button>

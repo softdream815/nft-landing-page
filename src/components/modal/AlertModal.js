@@ -22,13 +22,14 @@ const AlertModal = (props) => {
                 <Cancel className='btn-cancel' width={17} height={15} onClick={props.closeModal} />
                 <div className='modal-container'>
                     <Text size={16} weight={700} margin black>Woah! its not mint time yet!</Text>
-                    <Text size={18} weight={300} margin black>Check out our disocrd for the minting release date and updates!</Text>
+                    <Text size={18} weight={300} margin black>Check out our disocrd for the minting
+                    release date and updates!</Text>
                 </div>
 
                 <div className='icon-group'>
-                    <Discord width={30} height={30} />
-                    <Info width={30} height={30} />
+                    <a href='https://discord.gg/ns6FUYNDX3' target='_blank' rel='noreferrer'><Discord width={30} height={30} /></a>
                 </div>
+                <Info className='icon-info' width={30} height={30} />
             </Modal>
         </div>
     )

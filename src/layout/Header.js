@@ -53,8 +53,8 @@ const Header = () => {
       </div>
 
       <div className='social-icons'>
-        <Link to='/'><Twitter/></Link>
-        <Link to='/'><Discord/></Link>
+        <a href='https://twitter.com/kooboonft?s=21' target='_blank' rel="noreferrer"><Twitter/></a>
+        <a href='https://discord.gg/ns6FUYNDX3' target='_blank' rel="noreferrer"><Discord/></a>
         <Link to='/' onClick={showMenu} className='menu'><Menu width={25} height={20}/></Link>
       </div>
     </div>
