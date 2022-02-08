@@ -18,10 +18,10 @@ const Homepage = () => {
 
     const onLink = (type) => {
         $('html, body').animate(
-          {
-            scrollTop: $(`#${type}`).offset().top-200,
-          },
-          800
+            {
+                scrollTop: $(`#${type}`).offset().top - 200,
+            },
+            800
         )
     }
 
@@ -35,10 +35,10 @@ const Homepage = () => {
     }
 
     const items = [
-        {uuid:1, heading:'Q1. HOW MUCH DOES IT COST TO BUY ONE KOOBOO NFT?', content:'The price of minting will be announced soon on our Discord, so make sure to join our Discord. A lot of other announcements will be made only on our Discord channel.'},
-        {uuid:2, heading:'Q2. HOW CAN I GET MY HANDS ON THE KOOBOO NFT?', content:`You must be patient like an intelligent investor and well-connected like the elite. So join our Official Discord channel, start building your connections, and increase your chances of getting your hands on these rare KOOBOO'S.`},
-        {uuid:3, heading:'Q3. HOW MANY WILL THERE BE?', content:<p>Unlike other projects, we want to focus on quality rather than quantity.<br/>Therefore, a limited number of unique KOOBOO'S will be crafted and minted.</p>},
-        {uuid:4, heading:'Q4. HOW CAN I USE MY NFT?', content:'Our goal is to be able to use your KOOBOO NFT as an asset or pet in the Metaverse. As well as using it to unlock many members-only benefits and access to exclusive physical goods. The Status Symbols of the Future.'}
+        { uuid: 1, heading: 'Q1. HOW MUCH DOES IT COST TO BUY ONE KOOBOO NFT?', content: 'The price of minting will be announced soon on our Discord, so make sure to join our Discord. A lot of other announcements will be made only on our Discord channel.' },
+        { uuid: 2, heading: 'Q2. HOW CAN I GET MY HANDS ON THE KOOBOO NFT?', content: `You must be patient like an intelligent investor and well-connected like the elite. So join our Official Discord channel, start building your connections, and increase your chances of getting your hands on these rare KOOBOO'S.` },
+        { uuid: 3, heading: 'Q3. HOW MANY WILL THERE BE?', content: <p>Unlike other projects, we want to focus on quality rather than quantity.<br />Therefore, a limited number of unique KOOBOO'S will be crafted and minted.</p> },
+        { uuid: 4, heading: 'Q4. HOW CAN I USE MY NFT?', content: 'Our goal is to be able to use your KOOBOO NFT as an asset or pet in the Metaverse. As well as using it to unlock many members-only benefits and access to exclusive physical goods. The Status Symbols of the Future.' }
     ];
     return (
         <Layout>
@@ -77,8 +77,7 @@ const Homepage = () => {
 
                 <div className="mint-intro">
                     <Text size={20} weight={300}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id montes, eros etiam id tincidunt et nibh a.
-                        Sagittis tristique in sapien scelerisque massa condimentum adipiscing vitae.
+                        mint yourself a brand new kooboo bot on release day and enjoy all the special holder exclusive perks in our roadmap and more to come not yet announced!
                     </Text>
 
                     <Button width={115} height={56} text={"Mint"} onClick={onMint} ></Button>
@@ -167,17 +166,17 @@ const Homepage = () => {
                 <div className="description">
                     <div className="step1">
                         <div className="title"><Text size={24} weight={700} margin>SET KOOBOO FREE</Text></div>
-                        <div className="desc"><Text size={18} weight={300} margin>Our legendary Cyber Sneakers have some powers.
+                        <div className="desc"><Text size={18} weight={300} margin>Our legendary KOOBOO have some powers.
                             It is time to discover them.  real life approach</Text>‍
-                        <Text size={18} weight={300} margin>KOOBOO will be made into a physical action figure.
-                            50 will be offered by raffle. Countdown starts now.</Text></div>
+                            <Text size={18} weight={300} margin>KOOBOO will be made into a physical action figure.
+                                50 will be offered by raffle. Countdown starts now.</Text></div>
                     </div>
                     <div className="step2">
                         <div className="title"><Text size={24} weight={700} margin>KOOBOO WORLD TOUR</Text></div>
                         <div className="desc"><Text size={18} weight={300} margin>The IRL's KOOBOO'S are ready!!!
                             50 KOOBOO action figures will be dispatched to their NFT owner through a raffle.</Text>
-                        <Text size={18} weight={300}>What is better than bringing your KOOBOO to the world cup final?
-                            Some holders will be invited to attend the FIFA World cup</Text></div>
+                            <Text size={18} weight={300}>What is better than bringing your KOOBOO to the world cup final?
+                                Some holders will be invited to attend the FIFA World cup</Text></div>
                     </div>
                     <div className="step3">
                         <div className="title"><Text size={24} weight={700} margin>KOOBOO TO THE METAVERSE</Text></div>

@@ -34,7 +34,7 @@ const Header = () => {
         <div className='menu-item'><Link to='/' onClick={() => onLink("howto")}><Text weight={300} size={16}>How-To</Text></Link></div>
         <div className='menu-item'><Link to='/' onClick={() => onLink("roadmap")}><Text weight={300} size={16}>Roadmap</Text></Link></div>
         <div className='menu-item'><Link to='/' onClick={() => onLink("faq")}><Text weight={300} size={16}>FAQs</Text></Link></div>
-        <div className='menu-item'><Link to='/mint'><Text weight={300} size={16}>Mint</Text></Link></div>
+        {/* <div className='menu-item'><Link to='/mint'><Text weight={300} size={16}>Mint</Text></Link></div> */}
       </div>
 
       <div className='logo'>
@@ -49,7 +49,7 @@ const Header = () => {
         <Link to='/' onClick={() => onLink("howto")}>How-To</Link>
         <Link to='/' onClick={() => onLink("roadmap")}>Roadmap</Link>
         <Link to='/' onClick={() => onLink("faq")}>FAQs</Link>
-        <Link to='/mint'>Mint</Link>
+        {/* <Link to='/mint'>Mint</Link> */}
       </div>
 
       <div className='social-icons'>
