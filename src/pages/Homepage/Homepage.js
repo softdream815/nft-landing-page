@@ -3,6 +3,7 @@ import Layout from "../../layout/Layout"
 import Button from '../../components/button/Button'
 import Text from '../../components/text/Text'
 import AlertModal from '../../components/modal/AlertModal'
+import Member from '../../components/member/Member'
 import {
     Accordion,
     AccordionItem,
@@ -11,7 +12,9 @@ import {
     AccordionItemPanel,
 } from 'react-accessible-accordion';
 import './home.scss'
+import './FAQlist'
 import $ from "jquery"
+import items from './FAQlist'
 
 const Homepage = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -34,12 +37,6 @@ const Homepage = () => {
         setIsOpen(false)
     }
 
-    const items = [
-        { uuid: 1, heading: 'Q1. HOW MUCH DOES IT COST TO BUY ONE KOOBOO NFT?', content: 'The price of minting will be announced soon on our Discord, so make sure to join our Discord. A lot of other announcements will be made only on our Discord channel.' },
-        { uuid: 2, heading: 'Q2. HOW CAN I GET MY HANDS ON THE KOOBOO NFT?', content: `You must be patient like an intelligent investor and well-connected like the elite. So join our Official Discord channel, start building your connections, and increase your chances of getting your hands on these rare KOOBOO'S.` },
-        { uuid: 3, heading: 'Q3. HOW MANY WILL THERE BE?', content: <p>Unlike other projects, we want to focus on quality rather than quantity.<br />Therefore, a limited number of unique KOOBOO'S will be crafted and minted.</p> },
-        { uuid: 4, heading: 'Q4. HOW CAN I USE MY NFT?', content: 'Our goal is to be able to use your KOOBOO NFT as an asset or pet in the Metaverse. As well as using it to unlock many members-only benefits and access to exclusive physical goods. The Status Symbols of the Future.' }
-    ];
     return (
         <Layout>
             <AlertModal isOpen={isOpen} closeModal={closeModal} />
@@ -197,6 +194,18 @@ const Homepage = () => {
                 <div className="arrow-part-2">
                     <Text size={36} weight={700}>Roadmap</Text>
                     <img src="images/arrow2.png" alt=""></img>
+                </div>
+            </div>
+
+            <div className="section-team" id="team">
+                <div className="section-title">
+                    <Text size={36} weight>Meet KOOBOO Team</Text>
+                </div>
+                <div className="member-list">
+                    <Member src='images/team/founder.png' name="Jordan Mason" role="Founder"/>
+                    <Member src='images/robot1.png' name="Dylan Zhu" role="Lead Developer"/>
+                    <Member src='images/team/marketing.png' name="Ermirlind Duka" role="Lead Marketer"/>
+                    <Member src='images/team/manager.png' name="Uzair Majid" role="Manager"/>
                 </div>
             </div>
 

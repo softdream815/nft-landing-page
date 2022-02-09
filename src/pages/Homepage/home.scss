@@ -13,7 +13,7 @@
 
 .blur-circle2 {
     position: absolute;
-    right: -150px;
+    right: 0px;
     top: 750px;
 
     width: 350px;
@@ -148,6 +148,23 @@
     }
 }
 
+.section-team {
+    margin-top: 150px;
+    .section-title {
+        text-align: center;
+    }
+    .member-list {
+        text-align: center;
+        padding: 50px 100px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+        background-color: #0D0D0D;
+        margin-top: 50px;
+    }
+}
+
 .section-FAQ {
     margin-top: 250px;
     padding: 0px 100px;
@@ -250,7 +267,7 @@
     }
 }
 
-@media(max-width: 896px) {
+@media(max-width: 768px) {
     .blur-circle1 { display:none; }
     .blur-circle2 { display:none; }
     .section-home {
@@ -361,6 +378,11 @@
                 .title {span{font-size: 16px!important;}}
                 .desc {span{font-size: 12px!important; margin-bottom: 15px!important;}}
             }
+        }
+    }
+    .section-team {
+        .member-list{
+            padding: 50px 24px;
         }
     }
     .section-FAQ {

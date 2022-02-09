@@ -1,0 +1,32 @@
+.member-section {
+    width: 20%;
+    border-radius: 20px;
+    background-color: rgb(20, 20, 20);
+    margin-bottom: 50px;
+    .img-container {
+        width: 100%;
+        img {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            width: 100%;
+        }
+    }
+    .introduce {
+        padding: 20px 0px;
+        text-align: center;
+    }
+}
+
+
+
+@media(max-width: 1024px) {
+    .member-section {
+        width: 45%;
+    }
+}
+
+@media(max-width: 414px) {
+    .member-section {
+        width: 100%;
+    }
+}

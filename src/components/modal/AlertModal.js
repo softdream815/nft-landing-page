@@ -1,5 +1,4 @@
 import Modal from 'react-modal'
-import { useState } from 'react'
 import './style.scss'
 import { ReactComponent as Cancel } from '../../assets/icon/cancel.svg'
 import { ReactComponent as Info } from '../../assets/icon/info.svg'
