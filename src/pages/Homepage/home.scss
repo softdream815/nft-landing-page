@@ -173,7 +173,7 @@
     }
     .container {
         border-radius: 10px;
-        padding: 65px 0px;
+        padding: 65px 0px 20px 0px;
         background-color: #0D0D0D;
     }
 }
@@ -256,6 +256,22 @@
     }
 }
 
+@media(max-width: 1075px) {
+    .section-home {
+        .promote {
+            .title {
+                span{font-size: 48px!important;}
+            }
+        }
+        .btn-group {
+            button {
+                width: 120px!important;
+                height: 45px!important;
+            }
+        }
+    }
+}
+
 @media(max-width: 1024px) {
     .section-howto {
         .arrow-part {
@@ -263,6 +279,53 @@
         }
         .arrow-part-2 {
             img {width: 200px; height:200px;}
+        }
+        .description {
+            .step1 {
+                margin-bottom: 100px;
+            }
+            .step2 {
+                margin-bottom: 100px;
+            }
+        }
+    }
+}
+
+@media (max-width: 896px) {
+    .section-howto {
+        margin-top: 100px;
+        padding: 0px 24px;
+        .arrow-part {
+            display: none;
+        }
+        .arrow-part-2 {
+            display: none;
+        }
+        .step-number {
+            width: 10%;
+            .numbering {
+                width: 40px;
+                height: 40px;
+            }
+        }
+        .description {
+            width: 80%;
+            .step1 {
+                img {width: 24px; height: 24px;}
+                .title {span{font-size: 16px!important;}}
+                .desc {span{font-size: 12px!important; margin-bottom: 15px!important;}}
+                margin-bottom: 190px;
+            }
+            .step2 {
+                img {width: 24px; height: 24px;}
+                .title {span{font-size: 16px!important;}}
+                .desc {span{font-size: 12px!important; margin-bottom: 15px!important;}}
+                margin-bottom: 240px;
+            }
+            .step3 {
+                .title {span{font-size: 16px!important;}}
+                .desc {span{font-size: 12px!important; margin-bottom: 15px!important;}}
+            }
         }
     }
 }

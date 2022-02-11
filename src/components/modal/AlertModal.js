@@ -21,7 +21,7 @@ const AlertModal = (props) => {
                 <Cancel className='btn-cancel' width={17} height={15} onClick={props.closeModal} />
                 <div className='modal-container'>
                     <Text size={16} weight={700} margin black>Woah! its not mint time yet!</Text>
-                    <Text size={18} weight={300} margin black>Check out our disocrd for the minting
+                    <Text size={18} weight={300} margin black>Check out our Disocrd for the minting
                     release date and updates!</Text>
                 </div>
 

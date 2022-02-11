@@ -203,8 +203,8 @@ const Homepage = () => {
                 </div>
                 <div className="member-list">
                     <Member src='images/team/founder.png' name="Jordan Mason" role="Founder"/>
-                    <Member src='images/robot1.png' name="Dylan Zhu" role="Lead Developer"/>
-                    <Member src='images/team/marketing.png' name="Ermirlind Duka" role="Lead Marketer"/>
+                    <Member src='images/team/developer.png' name="Dylan Zhu" role="Lead Developer"/>
+                    <Member src='images/team/marketing.png' name="Ermirlind Duka" role="Marketer"/>
                     <Member src='images/team/manager.png' name="Uzair Majid" role="Manager"/>
                 </div>
             </div>
